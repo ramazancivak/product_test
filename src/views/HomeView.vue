@@ -1,18 +1,40 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <subProduct class="float-left col-6" @startProduct="event($data)"/>
+    <productTable class="float-left float-left" :startGetProduct="startGetProduct" :subProducts="subProductData"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import productTable from '@/components/productTable.vue'
+import subProduct from '@/components/subProduct.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    productTable,
+    subProduct
+  },
+  data(){
+    return{
+      startGetProduct:false,
+      subProductData:[]
+    }
+  },
+  methods:{
+    event(data){
+      this.startGetProduct=true
+      this.subProductData=data
+    }
+  },
+  mounted() {
   }
 }
 </script>
+<style>
+.home>div{
+  width:50%;
+  float:left;
+}
+</style>
