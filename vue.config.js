@@ -3,5 +3,5 @@ module.exports = defineConfig({
   publicPath: process.env.NODE_ENV === 'production'
     ? '/personaimport.github.io/'
     : '/',
-  transpileDependencies: true
+    transpileDependencies: true
 })
