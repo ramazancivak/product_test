@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  base: '/xmlproduct',
+  base: '/personaimport.github.io/',
   transpileDependencies: true
 })
