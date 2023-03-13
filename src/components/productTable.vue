@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div v-if="startGetProduct">
-      Toplam Ürün : {{ products.totalCount }}<br/>
+      Toplam Ürüns : {{ products.totalCount }}<br/>
       Yüklenen Ürün Sayısı : {{ products.data.length }}
     </div>
     <div v-else>
